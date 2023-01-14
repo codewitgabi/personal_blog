@@ -1,0 +1,45 @@
+{% extends "post/root.html" %}
+{% block title %} Idem's Blog {% endblock %}
+
+
+{% block content %}
+	<!-- Start Post Content -->
+
+	<section class="content-section">
+		{% if not posts %}
+			<p style="text-align: center; font-size: 1.4em;">
+				No post has been uploaded yet
+			</p>
+		{% else %}
+			{% for post in posts %}
+				<div class="post-top-container">
+					<div class="post-main-wrapper">
+						<img src="{{ post.thumbnail.url }}">
+						<legend class="post-title"><a href="{% url 'post'  post.slug %}">{{ post.title }}</a></legend>
+						<span class="float-left">by {{ post.author }}</span>
+						<span class="float-right"><i class="fa fa-clock-o"></i> {{ post.date_created }}</span>
+						<p class="post-description">
+							{{ post.content|safe|truncatewords:20 }}
+						</p>
+					</div>
+				</div>
+			{% endfor %}
+		{% endif %}
+	</section>
+
+	<!-- End post content -->
+
+	<!-- Start pagination content -->
+
+	<div class="pagination-box">
+	{% for page in posts.paginator.page_range %}
+		<span class="pagination-btn">
+			<a href="?page={{ page }}">{{ page }}</a>
+		</span>
+	{% endfor %}
+	</div>
+
+	<!-- End pagination content -->
+
+
+{% endblock %}

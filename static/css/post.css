@@ -1,0 +1,154 @@
+@media only screen and (max-width: 600px) {
+	.full-post-section {
+		margin: 6.3em 1em 1em 1em;
+	}
+	.full-post-wrapper {
+		box-shadow: hsl(0, 0%, 80%) 0 0 2px;
+		background: #fff;
+		padding: 1.3em;
+	}
+	.full-post-title {
+		font-size: 1.2rem;
+		font-weight: 500;
+		margin-bottom: 14px;
+		color: red;
+		text-align: center;
+	}
+	#post-ref-image {
+		width: 100%;
+		height: 180px;
+		object-fit: cover;
+	}
+	.comment-wrapper {
+		box-shadow: hsl(0, 0%, 80%) 0 0 2px;
+		background: #fff;
+		margin: 1em;
+		padding: 1em;
+	}
+	.comment-heading {
+		font-size: 1.5em;
+		font-weight: 600;
+		padding: 0.5em 0;
+	}
+	.comment-content {
+		margin: 0.5em 0;
+		padding: 15px 12px;
+		box-shadow: hsl(0, 0%, 90%) 0 0 15px;
+		background: #fff;
+		border-radius: 15px;
+	}
+	.commenter {
+		font-weight: 600;
+		font-size: 1em;
+	}
+	.comment-content p {
+		font-size: 1em;
+	}
+	.comment-wrapper form {
+		clear: both;
+	}
+	.comment-wrapper input,
+	.comment-wrapper textarea {
+		width: 100%;
+		padding: 15px;
+		display: inline-block;
+		margin: 10px 0 0 0;
+		font-size: 1em;
+	}
+	#comment-btn {
+		width: 40%;
+		padding: 15px;
+		background: none;
+		border: 1px solid blue;
+		display: inline-block;
+		margin: 10px 0;
+		color: blue;
+		border-radius: 5px;
+	}
+	/*
+	.reaction-wrapper {
+		box-shadow: hsl(0, 0%, 80%) 0 0 10px;
+		background: #fff;
+		padding: 10px;
+		margin: 0 1em 1em 1em;
+		border-radius: 8px 0 0 8px;
+	}
+	.fa-thumbs-up,
+	.fa-thumbs-down {
+		color: red;
+		font-size: 1.3rem;
+		margin-right: 5px;
+	}
+	.hide {
+		display: none;
+	}*/
+	.reduce-font-size {
+		font-size: 0.8rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.full-post-section {
+		margin: 6.3em 1.5em 2em 1.5em;
+	}
+	.full-post-wrapper {
+		box-shadow: hsl(0, 0%, 80%) 0 0 2px;
+		background: #fff;
+		padding: 1.3em;
+	}
+	.full-post-title {
+		font-size: 1.3em;
+		font-weight: 600;
+		margin-bottom: 14px;
+	}
+	#post-ref-image {
+		width: 100%;
+		height: 350px;
+		object-fit: cover;
+	}
+	.comment-wrapper {
+		box-shadow: hsl(0, 0%, 80%) 0 0 2px;
+		background: #fff;
+		margin: 1.5em;
+		padding: 1em;
+	}
+	.comment-heading {
+		font-size: 1.5em;
+		font-weight: 600;
+		padding: 0.5em 0;
+	}
+	.comment-content {
+		margin: 0.5em 0;
+		padding: 15px 12px;
+		box-shadow: hsl(0, 0%, 90%) 0 0 15px;
+		background: #fff;
+		border-radius: 15px;
+	}
+	.commenter {
+		font-weight: 600;
+		font-size: 1em;
+	}
+	.comment-content p {
+		font-size: 1em;
+	}
+	.comment-wrapper form {
+		clear: both;
+	}
+	.comment-wrapper input,
+	.comment-wrapper textarea {
+		width: 100%;
+		padding: 10px;
+		display: inline-block;
+		margin: 10px 0 0 0;
+	}
+	#comment-btn {
+		width: 40%;
+		padding: 15px;
+		background: none;
+		border: 1px solid blue;
+		display: inline-block;
+		margin: 10px 0;
+		color: blue;
+		border-radius: 5px;
+	}
+}

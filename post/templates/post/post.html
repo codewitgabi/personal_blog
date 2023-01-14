@@ -1,0 +1,68 @@
+{% extends "post/root.html" %}
+{% block title %} {{ post.title }} {% endblock %}
+
+
+{% block content %}
+		
+		<!-- Start Post Section -->
+		
+		<section class="full-post-section">
+			<div class="full-post-wrapper">
+				<legend class="full-post-title">{{ post.title }}</legend>
+				<span class="float-left reduce-font-size">by {{ post.author }}</span>
+				<span class="float-right reduce-font-size"><i class="fa fa-clock-o"></i> {{ post.date_created }}</span>
+				<br><br><br>
+				<img id="post-ref-image" src="{{ post.thumbnail.url }}">
+				<br><br>
+				<p>{{ post.content|safe }}</p>
+				<br>
+				<h5 style="font-size: large;">You can leave a comment in the comment section below for others to see. Thanks for reading!!!</h5>
+			</div>
+			
+		</section>
+		
+		<!-- End Post Section -->
+		
+		<!--
+		<div class="reaction-wrapper">
+			<i class="fa fa-thumbs-up react-btns" id="like-btn" data-react="like"></i>
+			<i class="fa fa-thumbs-down react-btns hide" id="unlike-btn" data-react="unlike"></i>
+			<span class="total-reaction">25 likes</span>
+		</div>
+		-->
+
+		<!-- Start Comment Section -->
+		
+		<div class="comment-wrapper">
+			<legend class="comment-heading">Leave a Comment</legend>
+			<hr>
+			
+			{% for comment in comments %}
+			<div class="comment-content">
+				<legend class="commenter">{{ comment.commenter }}</legend>
+				<p>{{ comment.content|safe }}</p>
+			</div>
+			{% endfor %}
+			
+			{% if comments %}
+				{% if not page_name == "all" %}
+					<a href="{% url 'view_all_comments' post.slug %}" class="float-right">See all...</a>
+				{% endif %}
+			{% endif %}
+			
+			<form method="post">
+			{% csrf_token %}
+			{{ form.media }}
+				<input type="text" name="commenter" placeholder="Your Name" >
+				<br><br>
+				{% for field in form %}
+					{{ field }}
+				{% endfor %}
+				<button type="submit" id="comment-btn">Post Comment</button>
+			</form>
+		</div>
+		
+		<!-- End Comment Section -->
+
+
+{% endblock %}
