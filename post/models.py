@@ -8,7 +8,7 @@ from django.template.loader import render_to_string
 class Post(models.Model):
 	title = models.CharField(max_length= 350)
 	thumbnail = models.ImageField(upload_to= "blog_images/")
-	author = models.CharField(max_length= 50, default= "Nsikak Abia Edem")
+	author = models.CharField(max_length= 50, default= "Codewitgabi")
 	date_created = models.DateField(auto_now_add= True)
 	content = FroalaField()
 	slug = models.SlugField(max_length= 350, null= True, blank= True)

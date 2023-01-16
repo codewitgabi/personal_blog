@@ -143,3 +143,9 @@ EMAIL_HOST_PASSWORD = "ijwoixwhyxwvjzkp"
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "djangoguru.com<no_reply@domain.com>"
 
+
+# THIRD-PARTY CONFIGURATIONS
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+
